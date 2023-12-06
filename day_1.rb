@@ -33,7 +33,7 @@ File.open('input/day_1.txt').each do |line|
   digits = line.scan(Regexp.new("#{matcher}\\w*#{matcher}"))
   if digits.empty?
     digit = line.scan(Regexp.new matcher).first.first
-    digits = [[digit, digit]]
+    digits = [[digit, digit].first]
   end
 
   digits = digits.first.map do |d|
